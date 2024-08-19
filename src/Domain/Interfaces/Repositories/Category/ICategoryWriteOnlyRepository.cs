@@ -1,4 +1,4 @@
-﻿namespace Domain.Repositories.Category
+﻿namespace Domain.Interfaces.Repositories.Category
 {
     public interface ICategoryWriteOnlyRepository
     {

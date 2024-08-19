@@ -1,4 +1,4 @@
-﻿namespace Domain.Repositories.Product
+﻿namespace Domain.Interfaces.Repositories.Product
 {
     public interface IProductWriteOnlyRepository
     {
