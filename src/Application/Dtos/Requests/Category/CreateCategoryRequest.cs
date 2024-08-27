@@ -3,12 +3,10 @@
     public sealed record CreateCategoryRequest
     {
         public string Name { get; init; }
-        public string? ImageUrl { get; init; }
 
-        public CreateCategoryRequest(string name, string? imageUrl = null)
+        public CreateCategoryRequest(string name)
         {
             Name = name;
-            ImageUrl = imageUrl;
         }
     }
 }
