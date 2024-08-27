@@ -11,12 +11,11 @@ namespace Domain.Entities
 
         public Category? Category { get; }
 
-        public Product(string name, string description, decimal price, int stock, int categoryId, string? imageUrl = null) : base(name, imageUrl)
+        public Product(string name, string description, decimal price, int stock, int categoryId) : base(name)
         {
             Description = description;
             Price = price;
             Stock = stock;
-            ImageUrl = imageUrl;
             CategoryId = categoryId;
         }
     }

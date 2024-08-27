@@ -6,6 +6,6 @@ namespace Domain.Entities
     {
         public IReadOnlyCollection<Product> Products { get; } = [];
 
-        public Category(string name, string? imageUrl = null) : base(name, imageUrl) { }
+        public Category(string name) : base(name) { }
     }
 }
