@@ -4,13 +4,11 @@
     {
         public int Id { get; init; }
         public string Name { get; init; }
-        public string? ImageUrl { get; init; }
 
-        public CreateCategoryResponse(int id, string name, string? imageUrl = null)
+        public CreateCategoryResponse(int id, string name)
         {
             Id = id;
             Name = name;
-            ImageUrl = imageUrl;
         }
     }
 }
