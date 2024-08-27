@@ -8,12 +8,12 @@ namespace Application.Mappings.Category
     {
         public Domain.Entities.Category RequestToDomain(CreateCategoryRequest request)
         {
-            return new Domain.Entities.Category(request.Name, request.ImageUrl);
+            return new Domain.Entities.Category(request.Name);
         }
 
         public CreateCategoryResponse DomainToResponse(Domain.Entities.Category category)
         {
-            return new CreateCategoryResponse(category.Id, category.Name, category.ImageUrl);
+            return new CreateCategoryResponse(category.Id, category.Name);
         }
     }
 }
