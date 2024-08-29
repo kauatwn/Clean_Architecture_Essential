@@ -10,7 +10,7 @@ namespace Infrastructure.EntityConfigurations
         {
             builder.HasKey(c => c.Id);
 
-            builder.Property(c => c.CreatedOn).HasDefaultValue(DateTime.UtcNow).IsRequired();
+            builder.Property(c => c.CreatedAt).HasDefaultValue(DateTime.UtcNow).IsRequired();
 
             builder.Property(c => c.Name).HasMaxLength(256).IsRequired();
             builder.HasIndex(c => c.Name).IsUnique();
