@@ -1,5 +1,5 @@
-﻿using Application.Dtos.Requests.Category;
-using Application.Dtos.Responses.Category;
+﻿using Application.DTOs.Requests.Category;
+using Application.DTOs.Responses.Category;
 
 namespace Application.Abstractions.UseCases.Category
 {
