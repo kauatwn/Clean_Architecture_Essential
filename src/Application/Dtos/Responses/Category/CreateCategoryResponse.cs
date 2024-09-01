@@ -1,9 +1,9 @@
-﻿namespace Application.Dtos.Responses.Category
+﻿namespace Application.DTOs.Responses.Category
 {
     public sealed record CreateCategoryResponse
     {
-        public int Id { get; init; }
-        public string Name { get; init; }
+        public int Id { get; }
+        public string Name { get; }
 
         public CreateCategoryResponse(int id, string name)
         {

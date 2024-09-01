@@ -1,12 +1,12 @@
-﻿namespace Application.Dtos.Requests.Product
+﻿namespace Application.DTOs.Requests.Product
 {
     public sealed record CreateProductRequest
     {
-        public string Name { get; init; }
-        public string Description { get; init; }
-        public decimal Price { get; init; }
-        public int Stock {  get; init; }
-        public int CategoryId { get; init; }
+        public string Name { get; }
+        public string Description { get; }
+        public decimal Price { get; }
+        public int Stock { get; }
+        public int CategoryId { get; }
 
         public CreateProductRequest(string name, string description, decimal price, int stock, int categoryId)
         {

@@ -1,11 +1,11 @@
-﻿namespace Application.Dtos.Responses.Product
+﻿namespace Application.DTOs.Responses.Product
 {
     public sealed record CreateProductResponse
     {
-        public int Id { get; init; }
-        public string Name { get; init; }
-        public string Description { get; init; }
-        public int CategoryId { get; init; }
+        public int Id { get; }
+        public string Name { get; }
+        public string Description { get; }
+        public int CategoryId { get; }
 
         public CreateProductResponse(int id, string name, string description, int categoryId)
         {
