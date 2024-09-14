@@ -1,11 +1,12 @@
 ﻿using Domain.Common;
 
-namespace Domain.Entities
-{
-    public sealed class Category : BaseEntity
-    {
-        public IReadOnlyCollection<Product> Products { get; } = [];
+namespace Domain.Entities;
 
-        public Category(string name) : base(name) { }
+public sealed class Category : BaseEntity
+{
+    public ICollection<Product> Products { get; private set; } = [];
+    
+    public Category(string name) : base(name)
+    {
     }
 }

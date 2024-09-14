@@ -1,14 +1,3 @@
-﻿namespace Application.DTOs.Responses.Category
-{
-    public sealed record CreateCategoryResponse
-    {
-        public int Id { get; }
-        public string Name { get; }
+﻿namespace Application.DTOs.Responses.Category;
 
-        public CreateCategoryResponse(int id, string name)
-        {
-            Id = id;
-            Name = name;
-        }
-    }
-}
+public sealed record CreateCategoryResponse(int Id, string Name);

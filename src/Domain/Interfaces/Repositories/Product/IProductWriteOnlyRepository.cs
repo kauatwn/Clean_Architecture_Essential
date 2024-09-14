@@ -1,7 +1,6 @@
-﻿namespace Domain.Interfaces.Repositories.Product
+﻿namespace Domain.Interfaces.Repositories.Product;
+
+public interface IProductWriteOnlyRepository
 {
-    public interface IProductWriteOnlyRepository
-    {
-        Task AddAsync(Entities.Product product);
-    }
+    Task AddAsync(Entities.Product product);
 }

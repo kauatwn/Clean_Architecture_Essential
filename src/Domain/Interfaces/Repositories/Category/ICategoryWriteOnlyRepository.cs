@@ -1,7 +1,6 @@
-﻿namespace Domain.Interfaces.Repositories.Category
+﻿namespace Domain.Interfaces.Repositories.Category;
+
+public interface ICategoryWriteOnlyRepository
 {
-    public interface ICategoryWriteOnlyRepository
-    {
-        Task AddAsync(Entities.Category category);
-    }
+    Task AddAsync(Entities.Category category);
 }
