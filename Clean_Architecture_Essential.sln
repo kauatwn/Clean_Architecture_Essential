@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "src\Infra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "src\API\API.csproj", "{672029ED-F761-4EB3-93BA-CFF9B7F09440}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting", "src\CrossCutting\CrossCutting.csproj", "{F15AC91A-9673-4DCD-89CE-148E073A2F01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{672029ED-F761-4EB3-93BA-CFF9B7F09440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{672029ED-F761-4EB3-93BA-CFF9B7F09440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{672029ED-F761-4EB3-93BA-CFF9B7F09440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15AC91A-9673-4DCD-89CE-148E073A2F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15AC91A-9673-4DCD-89CE-148E073A2F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15AC91A-9673-4DCD-89CE-148E073A2F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15AC91A-9673-4DCD-89CE-148E073A2F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +50,7 @@ Global
 		{85610B8E-C6C4-4EEA-8616-69A2600304B3} = {7207F2CC-67FC-4EE6-8FB4-BE22D5713BB9}
 		{D94B1E7E-F62A-4BEE-9D23-80B1D5B083EB} = {7207F2CC-67FC-4EE6-8FB4-BE22D5713BB9}
 		{672029ED-F761-4EB3-93BA-CFF9B7F09440} = {7207F2CC-67FC-4EE6-8FB4-BE22D5713BB9}
+		{F15AC91A-9673-4DCD-89CE-148E073A2F01} = {7207F2CC-67FC-4EE6-8FB4-BE22D5713BB9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6F5C7332-3DEC-4531-B8E2-6BB1791BF593}
