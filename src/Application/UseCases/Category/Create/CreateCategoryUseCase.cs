@@ -16,8 +16,7 @@ public class CreateCategoryUseCase(
     ICategoryMapper mapper,
     ICategoryReadOnlyRepository readOnlyRepository,
     ICategoryWriteOnlyRepository writeOnlyRepository,
-    IUnitOfWork unitOfWork)
-    : ICreateCategoryUseCase
+    IUnitOfWork unitOfWork) : ICreateCategoryUseCase
 {
     private IValidator<CreateCategoryRequest> Validator { get; } = validator;
     private ICategoryMapper Mapper { get; } = mapper;
@@ -25,7 +24,7 @@ public class CreateCategoryUseCase(
     private ICategoryWriteOnlyRepository WriteOnlyRepository { get; } = writeOnlyRepository;
     private IUnitOfWork UnitOfWork { get; } = unitOfWork;
 
-    public async Task<CreateCategoryResponse> ExecuteAsync(CreateCategoryRequest request)
+    public async Task<CategoryResponse> ExecuteAsync(CreateCategoryRequest request)
     {
         await ValidateAsync(request);
 
@@ -46,8 +45,9 @@ public class CreateCategoryUseCase(
         var categoryNameExists = await ReadOnlyRepository.ExistsByNameAsync(request.Name);
 
         if (categoryNameExists)
-            result.Errors.Add(new ValidationFailure(string.Empty,
-                ResourceExceptionMessages.NameAlreadyExistsMessage));
+        {
+            result.Errors.Add(new ValidationFailure(string.Empty, ResourceExceptionMessages.NameAlreadyExistsMessage));
+        }
 
         if (!result.IsValid)
         {
