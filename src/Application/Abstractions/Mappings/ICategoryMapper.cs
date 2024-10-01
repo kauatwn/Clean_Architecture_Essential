@@ -7,5 +7,5 @@ namespace Application.Abstractions.Mappings;
 public interface ICategoryMapper
 {
     Category RequestToDomain(CreateCategoryRequest request);
-    CreateCategoryResponse DomainToResponse(Category category);
+    CategoryResponse DomainToResponse(Category category);
 }
