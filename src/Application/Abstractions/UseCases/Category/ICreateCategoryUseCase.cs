@@ -5,5 +5,5 @@ namespace Application.Abstractions.UseCases.Category;
 
 public interface ICreateCategoryUseCase
 {
-    Task<CreateCategoryResponse> ExecuteAsync(CreateCategoryRequest request);
+    Task<CategoryResponse> ExecuteAsync(CreateCategoryRequest request);
 }
