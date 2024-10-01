@@ -8,11 +8,11 @@ public class CategoryMapper : ICategoryMapper
 {
     public Domain.Entities.Category RequestToDomain(CreateCategoryRequest request)
     {
-        return new Domain.Entities.Category(request.Name);
+        return new Domain.Entities.Category(request.Name, request.Description);
     }
 
-    public CreateCategoryResponse DomainToResponse(Domain.Entities.Category category)
+    public CategoryResponse DomainToResponse(Domain.Entities.Category category)
     {
-        return new CreateCategoryResponse(category.Id, category.Name);
+        return new CategoryResponse(category.Id, category.Name);
     }
 }
