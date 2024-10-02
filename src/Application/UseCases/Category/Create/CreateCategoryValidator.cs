@@ -11,7 +11,7 @@ public class CreateCategoryValidator : AbstractValidator<CreateCategoryRequest>
     {
         RuleFor(r => r.Name)
             .NotEmpty()
-            .WithMessage(ResourceExceptionMessages.EmptyNameMessage)
+            .WithMessage(ResourceExceptionMessages.NullOrEmptyNameMessage)
             .Length(FieldValidation.NameMinLength, FieldValidation.NameMaxLength)
             .WithMessage(string.Format(
                 ResourceExceptionMessages.NameLengthMessage,
