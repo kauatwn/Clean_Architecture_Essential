@@ -150,4 +150,7 @@
   <data name="UnknownErrorTitle" xml:space="preserve">
     <value>Unknown error</value>
   </data>
+  <data name="ResourceNotFoundTitle" xml:space="preserve">
+    <value>Resource not found</value>
+  </data>
 </root>

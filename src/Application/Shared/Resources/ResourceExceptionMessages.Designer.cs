@@ -133,6 +133,15 @@ namespace Application.Shared.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Resource not found.
+        /// </summary>
+        public static string ResourceNotFoundTitle {
+            get {
+                return ResourceManager.GetString("ResourceNotFoundTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unexpected error occurred. Please try again later.
         /// </summary>
         public static string UnknownErrorMessage {
