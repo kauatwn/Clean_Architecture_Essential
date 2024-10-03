@@ -17,5 +17,14 @@ public class CreateCategoryValidator : AbstractValidator<CreateCategoryRequest>
                 ResourceExceptionMessages.NameLengthMessage,
                 FieldValidation.NameMinLength,
                 FieldValidation.NameMaxLength));
+
+        RuleFor(r => r.Description)
+            .NotEmpty()
+            .WithMessage(ResourceExceptionMessages.NullOrEmptyDescriptionMessage)
+            .Length(FieldValidation.DescriptionMinLength, FieldValidation.DescriptionMaxLength)
+            .WithMessage(string.Format(
+                ResourceExceptionMessages.DescriptionLengthMessage,
+                FieldValidation.DescriptionMinLength,
+                FieldValidation.DescriptionMaxLength));
     }
 }
