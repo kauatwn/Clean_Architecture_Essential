@@ -153,4 +153,7 @@
   <data name="ResourceNotFoundTitle" xml:space="preserve">
     <value>Resource not found</value>
   </data>
+  <data name="NullOrEmptyDescriptionMessage" xml:space="preserve">
+    <value>The description must not be null or empty</value>
+  </data>
 </root>
