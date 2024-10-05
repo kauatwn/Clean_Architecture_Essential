@@ -27,7 +27,8 @@ public class ExceptionHandlerMiddleware : IMiddleware
                 Status = validationException.StatusCode,
                 Title = ResourceExceptionMessages.ValidationErrorTitle,
                 Detail = validationException.Message,
-                Instance = context.Request.Path.Value
+                Instance = context.Request.Path.Value,
+                Extensions = { ["errors"] = validationException.Errors }
             },
             ResourceNotFoundException resourceNotFoundException => new ProblemDetails
             {
