@@ -20,7 +20,16 @@ public class ExceptionHandlerMiddleware : IMiddleware
 
     private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
     {
-        var problemDetails = exception switch
+        var problemDetails = CreateProblemDetails(context, exception);
+
+        context.Response.ContentType = "application/json";
+        context.Response.StatusCode = problemDetails.Status ?? StatusCodes.Status500InternalServerError;
+        await context.Response.WriteAsJsonAsync(problemDetails);
+    }
+
+    private static ProblemDetails CreateProblemDetails(HttpContext context, Exception exception)
+    {
+        return exception switch
         {
             ErrorOnValidationException validationException => new ProblemDetails
             {
@@ -45,9 +54,5 @@ public class ExceptionHandlerMiddleware : IMiddleware
                 Instance = context.Request.Path.Value
             }
         };
-
-        context.Response.ContentType = "application/json";
-        context.Response.StatusCode = problemDetails.Status ?? StatusCodes.Status500InternalServerError;
-        await context.Response.WriteAsJsonAsync(problemDetails);
     }
 }
